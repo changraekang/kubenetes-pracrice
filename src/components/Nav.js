@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useRecoilState,  useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { listPageReLoading, focusNav } from "../atom/Atoms";
 import styles from "./Nav.module.css";
 import navList from "../atom/NavList";
@@ -45,23 +45,15 @@ function Nav() {
   };
   return (
     <div>
-      <nav
-        onMouseOver={onMouseOverOut}
-        onMouseOut={onMouseOverOut}
-        style={
-          changing
-            ? {
-                backgroundColor: "#033e93",
-                boxShadow:
-                  "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
-              }
-            : { backgroundColor: "transparent" }
-        }
-        className={styles.container}
-      >
+      <nav className={styles.container}>
         <div className={styles.title}>
           <Link to="/" onClick={() => setFocusPath("")}>
-          <img src={`bitvelo_logo.png` }alt="" height="27px" onClick={() => setFocusPath("")}></img>
+            <img
+              src={`bitvelo_logo.png`}
+              alt=""
+              height="27px"
+              onClick={() => setFocusPath("")}
+            ></img>
           </Link>
         </div>
         <ul className={styles.option__list}>
@@ -79,13 +71,12 @@ function Nav() {
                         }
                   }
                 >
-                  {title} 
+                  {title}
                 </Link>
               </li>
             );
           })}
         </ul>
-       
       </nav>
       <div className={styles.null}></div>
     </div>

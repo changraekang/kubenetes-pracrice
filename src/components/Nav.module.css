@@ -1,7 +1,7 @@
 :root {
     --green-color-3: #033e93;
     --green-color-2: #ffffff;
-    --green-color-1: #033e93;
+    --green-color-1: #51575e;
   }
   .container {
     display: flex;
@@ -9,7 +9,7 @@
     align-items: left;
   
     padding: 4px 64px;
-    background-color: transparent;
+    background-color: var(--green-color-3);
     position: fixed;
     left: 0;
     right: 0;
